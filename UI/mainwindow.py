@@ -16,6 +16,9 @@ class Ui_MainWindow(object):
         MainWindow.resize(938, 648)
         MainWindow.setMinimumSize(QtCore.QSize(938, 648))
         MainWindow.setMaximumSize(QtCore.QSize(938, 648))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/icon/armourer_sketch.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.Lord_Tab = QtWidgets.QTabWidget(self.centralwidget)
@@ -1560,3 +1563,4 @@ class Ui_MainWindow(object):
         self.actionOpen.setShortcut(_translate("MainWindow", "Ctrl+O"))
         self.actionSave.setText(_translate("MainWindow", "Save"))
         self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S"))
+import rsrc_rc
