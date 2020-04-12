@@ -84,9 +84,12 @@ param_fields = {
     "TargetChoice": ["TargetChoice"]
 }
 
+not_personal = [  # unused
+    "Name",
+    "Description",
+]
+
 param_names = [
-  "Name",
-  "Description",
   "Unknown000",
   "Unknown001",
   "Unknown002",

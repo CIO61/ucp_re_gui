@@ -35,10 +35,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if upd:
             self.update_aic(self.latest_tab)
         lord = lords[idx]
+        self.Name.setText(lord.Name)
+        self.Description.setText(lord.Description)
         for param_name in param_types.param_names:
             obj = getattr(self, param_name)
             obj_name = obj.__class__.__name__
-            val = getattr(lord, param_name)
+            val = lord.Personality[param_name]
             if val is None:
                 continue
             for field_name in param_types.param_fields:
@@ -53,13 +55,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 obj.setValue(val)
             elif obj_name == "QCheckBox":
                 obj.setChecked(bool(val))
-            elif obj_name == "QLineEdit":
-                obj.setText(val)
         self.latest_tab = idx
 
     @QtCore.pyqtSlot()
     def update_aic(self, idx):
         lord = lords[idx]
+        lord.Name = self.Name.text()
+        lord.Description = self.Description.text()
         for param_name in param_types.param_names:
             obj = getattr(self, param_name)
             obj_name = obj.__class__.__name__
@@ -71,9 +73,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                     val *= 100
             elif obj_name == "QCheckBox":
                 val = str(obj.isChecked())
-            elif obj_name == "QLineEdit":
-                val = obj.text()
-            lord.__setattr__(param_name, val)
+            lord.Personality[param_name] = val
 
     def load_from_file(self, file=None):
         if file is None:
@@ -102,7 +102,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 file = dialog.selectedFiles()[0]
             else:
                 return
-
+        self.update_aic(self.Lord_Tab.currentIndex())
         output = dict()
         output["AICShortDescription"] = {
             "German": self.German.toPlainText(),
@@ -111,15 +111,15 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             "Russian": self.Russian.toPlainText(),
             "Chinese": self.Chinese.toPlainText()
         }
-        output["AICharacters"] = dict()
-        output["AICharacters"]["Personality"] = dict()
+        output["AICharacters"] = list()
         for lord in lords:
-            for param_name in param_types.param_names:
-                if param_name == "Name" or param_name == "Description":
-                    output["AICharacters"][param_name] = getattr(lord, param_name)
-                else:
-                    output["AICharacters"]["Personality"][param_name] = getattr(lord, param_name)
-        json.dump(output, open(file, encoding="utf-8", mode="w+"), indent=4, ensure_ascii=False)
+            lord_info = {
+                "Name": getattr(lord, "Name"),
+                "Description": getattr(lord, "Description"),
+                "Personality": getattr(lord, "Personality")
+            }
+            output["AICharacters"].append(lord_info)
+        json.dump(output, open(file, encoding="utf-8", newline="\n", mode="w"), indent="\t", ensure_ascii=False,)
 
 
 def load_parameters(config):
@@ -127,8 +127,7 @@ def load_parameters(config):
     for i, lord in enumerate(lords):
         lord.Name = chars[i]["Name"]
         lord.Description = chars[i]["Description"]
-        for attrib in chars[i]["Personality"]:
-            lord.__setattr__(attrib, chars[i]["Personality"][attrib])
+        lord.Personality = chars[i]["Personality"]
 
 
 if __name__ == '__main__':

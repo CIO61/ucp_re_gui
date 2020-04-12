@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created by: PyQt5 UI code generator 5.14.1
+# Created by: PyQt5 UI code generator 5.14.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -16,7 +16,6 @@ class Ui_MainWindow(object):
         MainWindow.resize(938, 648)
         MainWindow.setMinimumSize(QtCore.QSize(938, 648))
         MainWindow.setMaximumSize(QtCore.QSize(938, 648))
-        MainWindow.setWindowOpacity(1.0)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.Lord_Tab = QtWidgets.QTabWidget(self.centralwidget)
@@ -1304,14 +1303,14 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.Lord_Tab.setCurrentIndex(0)
-        self.Param_Tab.setCurrentIndex(1)
+        self.Param_Tab.setCurrentIndex(0)
         self.TroopRecruitConfig.setCurrentIndex(0)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "AI Character Editing GUI"))
         self.Lord_Tab.setTabText(self.Lord_Tab.indexOf(self.Rat), _translate("MainWindow", "Rat"))
         self.Lord_Tab.setTabText(self.Lord_Tab.indexOf(self.Snake), _translate("MainWindow", "Snake"))
         self.Lord_Tab.setTabText(self.Lord_Tab.indexOf(self.Pig), _translate("MainWindow", "Pig"))
@@ -1558,4 +1557,6 @@ class Ui_MainWindow(object):
         self.Param_Tab.setTabText(self.Param_Tab.indexOf(self.Miscellaneous), _translate("MainWindow", "Miscellaneous"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.actionOpen.setText(_translate("MainWindow", "Open"))
+        self.actionOpen.setShortcut(_translate("MainWindow", "Ctrl+O"))
         self.actionSave.setText(_translate("MainWindow", "Save"))
+        self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S"))
