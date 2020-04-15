@@ -156,9 +156,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         output["AICharacters"] = list()
         for lord in lords:
             lord_info = {
-                "Name": getattr(lord, "Name"),
-                "Description": getattr(lord, "Description"),
-                "Personality": getattr(lord, "Personality")
+                "Name": lord.Name,
+                "Description": lord.Description,
+                "Personality": lord.Personality,
+                "CustomName": lord.CustomName
             }
             if any(lord.Personality[item] is None for item in lord.Personality):
                 continue
@@ -172,9 +173,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 def load_parameters(config):
     chars = config["AICharacters"]
     for i, lord in enumerate(lords):
-        lord.Name = chars[i]["Name"]
-        lord.Description = chars[i]["Description"]
-        lord.Personality = chars[i]["Personality"]
+        try:
+            lord.Name = chars[i]["Name"]
+            lord.Personality = chars[i]["Personality"]
+            lord.Description = chars[i]["Description"]
+            lord.CustomName = chars[i]["CustomName"]
+        except KeyError:
+            continue
 
 
 if __name__ == '__main__':
