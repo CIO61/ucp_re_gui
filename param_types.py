@@ -86,7 +86,8 @@ param_fields = {
 
 not_personal = [  # unused
     "Name",
-    "Description",
+    "Description",  # deprecated
+    "CustomName"
 ]
 
 param_names = [
