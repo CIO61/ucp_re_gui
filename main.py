@@ -2,7 +2,7 @@ import param_types
 import json
 import sys
 import os
-from UI.mainwindow import Ui_MainWindow
+from UI.aic_gui import Ui_MainWindow
 from PyQt5 import QtWidgets
 from aic import aic
 

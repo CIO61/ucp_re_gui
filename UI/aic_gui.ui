@@ -1,0 +1,2997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>938</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>938</width>
+    <height>648</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>938</width>
+    <height>648</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>UCP Resource Editing GUI</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="rsrc.qrc">
+    <normaloff>:/icon/armourer_sketch.ico</normaloff>:/icon/armourer_sketch.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="Lord_Tab">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>931</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Rat">
+     <attribute name="title">
+      <string>Rat</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Snake">
+     <attribute name="title">
+      <string>Snake</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Pig">
+     <attribute name="title">
+      <string>Pig</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Wolf">
+     <attribute name="title">
+      <string>Wolf</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Saladin">
+     <attribute name="title">
+      <string>Saladin</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Caliph">
+     <attribute name="title">
+      <string>Caliph</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Sultan">
+     <attribute name="title">
+      <string>Sultan</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Richard">
+     <attribute name="title">
+      <string>Richard</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Frederick">
+     <attribute name="title">
+      <string>Frederick</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Phillip">
+     <attribute name="title">
+      <string>Phillip</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Wazir">
+     <attribute name="title">
+      <string>Wazir</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Emir">
+     <attribute name="title">
+      <string>Emir</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Nizar">
+     <attribute name="title">
+      <string>Nizar</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Sheriff">
+     <attribute name="title">
+      <string>Sheriff</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Marshall">
+     <attribute name="title">
+      <string>Marshall</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="Abbot">
+     <attribute name="title">
+      <string>Abbot</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="Param_Tab">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>921</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="Economy">
+     <attribute name="title">
+      <string>Economy / Castle Management</string>
+     </attribute>
+     <widget class="QGroupBox" name="Popularity">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>120</width>
+        <height>122</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Popularity Parameters</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Critical</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="CriticalPopularity">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Below this value, the AI sells more stuff than usual to get money.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="suffix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Lowest</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="LowestPopularity">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Below this value the AI sets taxes in steps to TaxesMin, and rations to 'extra rations' until it reaches 'HighestPopularity' again.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="suffix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Highest</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="HighestPopularity">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Above this value the AI sets taxes back up until a stable 0 to -3 current popularity modifier is reached&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="suffix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="Taxes">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>20</y>
+        <width>131</width>
+        <height>122</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Taxes</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="TaxesMin">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Minimum taxes allowed. 0 to 11 beeing the steps from +7 popularity to -24 popularity by taxes in the keep.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="suffix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>11</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="TaxesMax">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum of Taxes allowed. 0 to 11 beeing the steps from +7 popularity to -24 popularity by taxes in the keep.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="suffix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>11</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Minimum</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Maximum</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="FarmBuildings">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>150</y>
+        <width>121</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Farm Buildings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Population Per Farm</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="PopulationPerFarm">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Triggers building of farms for every X amount of current available workers. Set to 0 to disable building&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>512</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_120">
+         <property name="text">
+          <string>Max Farms</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="MaxFarms">
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_34">
+         <property name="text">
+          <string>Build Order</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="Farm1"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="Farm2"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="Farm3"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="Farm4"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="Farm5"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="Farm6"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="Farm7"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="Farm8"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="IndustryBuildings">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>150</y>
+        <width>131</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Industry Buildings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Woodcutter</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Pop Per</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="PopulationPerWoodcutter">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Triggers building of woodcutters for every X amount of current available workers. Set to 0 to disable building&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>512</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>Max</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="MaxWoodcutters">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum number of woodcutters to place&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>512</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Quarry</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_13">
+         <property name="text">
+          <string>Pop Per</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="PopulationPerQuarry">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Triggers building of quarries for every X amount of current available workers. Set to 0 to disable building&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>512</number>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_14">
+         <property name="text">
+          <string>Max</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QSpinBox" name="MaxQuarries">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum number of quarries to place&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>512</number>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>IronMine</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>Pop Per</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QSpinBox" name="PopulationPerIronmine">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Triggers building of iron mines for every X amount of current available workers. Set to 0 to disable building&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>512</number>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_16">
+         <property name="text">
+          <string>Max</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QSpinBox" name="MaxIronmines">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum number of iron mines to place&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>512</number>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>PitchRig</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="label_17">
+         <property name="text">
+          <string>Pop Per</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <widget class="QSpinBox" name="PopulationPerPitchrig">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Triggers building of pitch rigs for every X amount of current available workers. Set to 0 to disable building.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>512</number>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="label_18">
+         <property name="text">
+          <string>Max</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="QSpinBox" name="MaxPitchrigs">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum number of pitch rigs to place&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>512</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="SellResources">
+      <property name="geometry">
+       <rect>
+        <x>759</x>
+        <y>20</y>
+        <width>121</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resources to sell down to 0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="title">
+       <string>SellResources</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="8" column="2">
+        <widget class="QComboBox" name="SellResource09"/>
+       </item>
+       <item row="14" column="2">
+        <widget class="QComboBox" name="SellResource15"/>
+       </item>
+       <item row="2" column="2">
+        <widget class="QComboBox" name="SellResource03"/>
+       </item>
+       <item row="11" column="2">
+        <widget class="QComboBox" name="SellResource12"/>
+       </item>
+       <item row="5" column="2">
+        <widget class="QComboBox" name="SellResource07"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QComboBox" name="SellResource01"/>
+       </item>
+       <item row="9" column="2">
+        <widget class="QComboBox" name="SellResource10"/>
+       </item>
+       <item row="6" column="2">
+        <widget class="QComboBox" name="SellResource06"/>
+       </item>
+       <item row="13" column="2">
+        <widget class="QComboBox" name="SellResource14"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QComboBox" name="SellResource02"/>
+       </item>
+       <item row="7" column="2">
+        <widget class="QComboBox" name="SellResource08"/>
+       </item>
+       <item row="3" column="2">
+        <widget class="QComboBox" name="SellResource04"/>
+       </item>
+       <item row="4" column="2">
+        <widget class="QComboBox" name="SellResource05"/>
+       </item>
+       <item row="12" column="2">
+        <widget class="QComboBox" name="SellResource13"/>
+       </item>
+       <item row="10" column="2">
+        <widget class="QComboBox" name="SellResource11"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="ResourceManagement">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>20</y>
+        <width>241</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Resource Management</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_11">
+       <item row="9" column="1">
+        <widget class="QSpinBox" name="DoubleRationsFoodThreshold">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Above this value of food the AI will give double rations out.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="MinimumCheese">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reserves that are only consumed if current popularity &amp;lt; LowestPopularity. If the AI has less than this amount it will prioritize buying the missing food.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string>MinWheat</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="1">
+        <widget class="QSpinBox" name="MaxResourceOther">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum amount of hops, iron, pitch and flour to store in the stockpile.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="1">
+        <widget class="QSpinBox" name="MaxStone">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum amount of stone to store in the stockpile + the amount of the biggest unbuild Stonebuilding that hasn't been reached in the buildorder of the AIV.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1">
+        <widget class="QSpinBox" name="MaxEquipment">
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="0">
+        <widget class="QLabel" name="label_29">
+         <property name="text">
+          <string>MaxStone</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1">
+        <widget class="QSpinBox" name="MaxFood">
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QSpinBox" name="MinimumGoodsRequiredAfterTrade">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the AI would have less than this amount of a good after sending them, it won't send them to the requesting player.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="QLabel" name="label_19">
+         <property name="text">
+          <string>MaxFood</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_22">
+         <property name="text">
+          <string>MinBread</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="1">
+        <widget class="QSpinBox" name="MaxWood">
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>TradeAmountEquipment</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string>TradeAmountFood</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="label_32">
+         <property name="text">
+          <string>MaxBeer</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="QSpinBox" name="MaxBeer">
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="MinimumApples">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reserves that are only consumed if current popularity &amp;lt; LowestPopularity. If the AI has less than this amount it will prioritize buying the missing food.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QSpinBox" name="MinimumWheat">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the AI has less than this amount, it will prioritize buying the missing wheat.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_26">
+         <property name="text">
+          <string>MinimumGoods AfterTrade</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_21">
+         <property name="text">
+          <string>MinCheese</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="0">
+        <widget class="QLabel" name="label_28">
+         <property name="text">
+          <string>MaxWood</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_27">
+         <property name="text">
+          <string>DoubleRationsFoodThreshold</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_20">
+         <property name="text">
+          <string>MinApples</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="MinimumBread">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reserves that are only consumed if current popularity &amp;lt; LowestPopularity. If the AI has less than this amount it will prioritize buying the missing food.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0">
+        <widget class="QLabel" name="label_31">
+         <property name="text">
+          <string>MaxEquipment</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="0">
+        <widget class="QLabel" name="label_30">
+         <property name="text">
+          <string>MaxResourceOther</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QSpinBox" name="TradeAmountEquipment">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount of equipment for the armoury bought at once. Only one of these trades is made per gametick.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <widget class="QSpinBox" name="MaxResourceVariance">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allowed tolerance for all goods before AI sells back to max allowed stock&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="label_64">
+         <property name="text">
+          <string>MaxResourceVariance</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_103">
+         <property name="text">
+          <string>MinimumHop</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QSpinBox" name="TradeAmountFood">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount of food, wheat or hops bought at once. Only one of these trades is made per gametick.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>4096</number>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="MinimumHop">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the AI has less than this amount, it will prioritize buying the missing hops.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="WorkshopSettings">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>20</y>
+        <width>181</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Workshop Settings</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_12">
+       <item row="3" column="1">
+        <widget class="QComboBox" name="FletcherSetting"/>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="PoleturnerSetting"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_67">
+         <property name="text">
+          <string>Poleturner</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_66">
+         <property name="text">
+          <string>Fletcher</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_65">
+         <property name="text">
+          <string>Blacksmith</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="BlacksmithSetting"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="Eco_Misc">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>390</y>
+        <width>181</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Miscellaneous</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_13">
+       <property name="leftMargin">
+        <number>4</number>
+       </property>
+       <property name="rightMargin">
+        <number>4</number>
+       </property>
+       <item row="1" column="5">
+        <widget class="QSpinBox" name="ResourceRebuildDelay">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;he delay before the AI rebuilds destroyed resource buildings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="label_62">
+         <property name="text">
+          <string>BuildInterval</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="5">
+        <widget class="QSpinBox" name="RecruitGoldThreshold">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A (gold) threshold which disables any recruitment and buying of resources for aiv buildings or economy below it. Sortie units, ressource buildings and defensive siegeengines are excluded.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="5">
+        <widget class="QSpinBox" name="BuildInterval">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The gameticks between buildsteps. This is only considered &amp;lt;= 5000 gold&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLabel" name="label_63">
+         <property name="text">
+          <string>ResourceRebuildDelay</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QLabel" name="label_33">
+         <property name="text">
+          <string>RecruitGoldThreshold</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Military">
+     <attribute name="title">
+      <string>Military</string>
+     </attribute>
+     <widget class="QGroupBox" name="Siege">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>230</y>
+        <width>211</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Siege</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_76">
+         <property name="text">
+          <string>DiggingUnitMax</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_96">
+         <property name="text">
+          <string>SiegeDefGroups#</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_81">
+         <property name="text">
+          <string>MaxAssassins</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="AttUnitSiegeDefGroupsCount">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This may or may not be the number of groups the AttUnitSiegeDef split into&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_83">
+         <property name="text">
+          <string>MaxTunnelers</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_77">
+         <property name="text">
+          <string>DiggingUnit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="AttUnitSiegeDef"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_92">
+         <property name="text">
+          <string>UnitSiegeDef</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_93">
+         <property name="text">
+          <string>SiegeDefMax</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_82">
+         <property name="text">
+          <string>MaxLaddermen</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QSpinBox" name="AttUnitSiegeDefMax"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="AttDiggingUnitMax"/>
+       </item>
+       <item row="5" column="1">
+        <widget class="QSpinBox" name="AttMaxEngineers"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_79">
+         <property name="text">
+          <string>MaxEngineers</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="AttDiggingUnit"/>
+       </item>
+       <item row="8" column="1">
+        <widget class="QSpinBox" name="AttMaxTunnelers"/>
+       </item>
+       <item row="7" column="1">
+        <widget class="QSpinBox" name="AttMaxLaddermen"/>
+       </item>
+       <item row="6" column="1">
+        <widget class="QSpinBox" name="AttMaxAssassins"/>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_100">
+         <property name="text">
+          <string>CowThrowInterval</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QSpinBox" name="CowThrowInterval">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount of stones needed to be thrown until the AI throws a diseased cow instead (catapults &amp;amp; trebuchets). Value &lt;span style=&quot; font-weight:600;&quot;&gt;0&lt;/span&gt; disables cows and &lt;span style=&quot; font-weight:600;&quot;&gt;-1&lt;/span&gt; makes the AI not throw any boulders, only cows.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="minimum">
+          <number>-1</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTabWidget" name="TroopRecruitConfig">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>390</y>
+        <width>170</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The '&lt;span style=&quot; font-weight:600;&quot;&gt;weak&lt;/span&gt;' state sets in if the AI is extremely weak for example &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;troops &amp;lt; 8, &lt;br/&gt;gold &amp;lt; 200, &lt;br/&gt;population &amp;lt; 15&lt;/span&gt;, etc&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;The '&lt;span style=&quot; font-weight:600;&quot;&gt;strong&lt;/span&gt;' state sets in if for example the AI has &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;troops &amp;gt;= 40, &lt;br/&gt;gold &amp;gt;= 200, &lt;br/&gt;population &amp;gt;= 40&lt;/span&gt;, etc&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="TroopRecruitConfigPage1">
+       <attribute name="title">
+        <string>Default</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="3">
+         <widget class="QSpinBox" name="RecruitProbDefDefault">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Percentage values &lt;span style=&quot; font-weight:600;&quot;&gt;[Def, Attack, Raid&lt;/span&gt;] must sum to 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QSpinBox" name="RecruitInterval">
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QSpinBox" name="RecruitProbRaidDefault">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Percentage values &lt;span style=&quot; font-weight:600;&quot;&gt;[Def, Attack, Raid&lt;/span&gt;] must sum to 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QSpinBox" name="RecruitProbAttackDefault">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Percentage values &lt;span style=&quot; font-weight:600;&quot;&gt;[Def, Attack, Raid&lt;/span&gt;] must sum to 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="label_70">
+          <property name="text">
+           <string>Attack</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="label_42">
+          <property name="text">
+           <string>Raid</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_44">
+          <property name="text">
+           <string>Interval</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_73">
+          <property name="text">
+           <string>Def</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TroopRecruitConfigPage2_2">
+       <attribute name="title">
+        <string>Weak</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_9" rowstretch="0,0,0,0,0">
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="RecruitProbDefWeak">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Percentage values &lt;span style=&quot; font-weight:600;&quot;&gt;[Def, Attack, Raid&lt;/span&gt;] must sum to 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="RecruitProbAttackWeak">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Percentage values &lt;span style=&quot; font-weight:600;&quot;&gt;[Def, Attack, Raid&lt;/span&gt;] must sum to 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QSpinBox" name="RecruitIntervalWeak">
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_71">
+          <property name="text">
+           <string>Def</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_45">
+          <property name="text">
+           <string>Interval</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_41">
+          <property name="text">
+           <string>Raid</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_68">
+          <property name="text">
+           <string>Attack</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSpinBox" name="RecruitProbRaidWeak">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Percentage values &lt;span style=&quot; font-weight:600;&quot;&gt;[Def, Attack, Raid&lt;/span&gt;] must sum to 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TroopRecruitConfigPage3_2">
+       <attribute name="title">
+        <string>Strong</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_10">
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+        <item row="1" column="2">
+         <widget class="QSpinBox" name="RecruitProbAttackStrong">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Percentage values &lt;span style=&quot; font-weight:600;&quot;&gt;[Def, Attack, Raid&lt;/span&gt;] must sum to 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="label_75">
+          <property name="text">
+           <string>Attack</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QSpinBox" name="RecruitProbRaidStrong">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Percentage values &lt;span style=&quot; font-weight:600;&quot;&gt;[Def, Attack, Raid&lt;/span&gt;] must sum to 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2">
+         <widget class="QSpinBox" name="RecruitIntervalStrong">
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLabel" name="label_74">
+          <property name="text">
+           <string>Interval</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_46">
+          <property name="text">
+           <string>Raid</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QSpinBox" name="RecruitProbDefStrong">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Percentage values &lt;span style=&quot; font-weight:600;&quot;&gt;[Def, Attack, Raid&lt;/span&gt;] must sum to 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_72">
+          <property name="text">
+           <string>Def</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="Raids">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>230</y>
+        <width>291</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Raids</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QGroupBox" name="RaidUnits">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>141</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>RaidUnits</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <widget class="QScrollArea" name="scrollArea_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>141</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>122</width>
+           <height>220</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QComboBox" name="RaidUnit1"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="RaidUnit2"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="RaidUnit3"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="RaidUnit4"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="RaidUnit5"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="RaidUnit6"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="RaidUnit7"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="RaidUnit8">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="HarrasSiegeEngines">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>100</y>
+         <width>131</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>HarrassingSiegeEngines</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+       <widget class="QScrollArea" name="scrollArea_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>131</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>112</width>
+           <height>220</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="leftMargin">
+           <number>9</number>
+          </property>
+          <property name="rightMargin">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QComboBox" name="HarassingSiegeEngine1"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="HarassingSiegeEngine2"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="HarassingSiegeEngine3"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="HarassingSiegeEngine4"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="HarassingSiegeEngine5"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="HarassingSiegeEngine6"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="HarassingSiegeEngine7"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="HarassingSiegeEngine8"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>191</width>
+         <height>90</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_59">
+          <property name="text">
+           <string>RaidUnitsBase</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="RaidUnitsBase">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Base amount of raid troops&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;Special case: [unknown trigger =&amp;gt; end result multiplied by 1.25]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_60">
+          <property name="text">
+           <string>RaidUnitsRandom</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="RaidUnitsRandom">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum random addition to raid troops. &lt;/p&gt;&lt;p&gt;Special cases: &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;[gold &amp;gt; 5000 =&amp;gt; multiplied by 2][gold &amp;lt; 1000 =&amp;gt; set to 0]&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;[enemy gold &amp;lt; 500 =&amp;gt; divided by -2]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_61">
+          <property name="text">
+           <string>HarassingSiegeEnginesMax</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSpinBox" name="HarassingSiegeEnginesMax">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The maximum of harassing siege engines an AI builds. Capped at 10.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_35">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>370</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Troop Recruiting</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="Attack">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>10</y>
+        <width>381</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Attack</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_14">
+       <item row="18" column="3">
+        <widget class="QSpinBox" name="AttForceBase">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The base amount of troops with which this AI attacks&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="18" column="2">
+        <widget class="QLabel" name="label_39">
+         <property name="text">
+          <string>AttForceBase</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="3">
+        <widget class="QSpinBox" name="AttUnitPatrolGroupsCount">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;# of groups the AttUnitPatrol split into. &lt;span style=&quot; font-weight:600;&quot;&gt;BUGGY&lt;/span&gt;! More than 1 group results to only a single group attacking, the others standing idle.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="28" column="2">
+        <widget class="QLabel" name="label_99">
+         <property name="text">
+          <string>AttUnitPatrolRecommandDelay</string>
+         </property>
+        </widget>
+       </item>
+       <item row="29" column="3">
+        <widget class="QSpinBox" name="AttUnitEngageMax"/>
+       </item>
+       <item row="25" column="0">
+        <widget class="QLabel" name="label_98">
+         <property name="text">
+          <string>AttUnitMain3</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_80">
+         <property name="text">
+          <string>AttUnit2Max</string>
+         </property>
+        </widget>
+       </item>
+       <item row="20" column="0">
+        <widget class="QLabel" name="label_94">
+         <property name="text">
+          <string>AttUnitMain2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="25" column="1">
+        <widget class="QComboBox" name="AttUnitMain3"/>
+       </item>
+       <item row="0" column="3">
+        <widget class="QSpinBox" name="AttUnit2Max"/>
+       </item>
+       <item row="28" column="0">
+        <widget class="QLabel" name="label_97">
+         <property name="text">
+          <string>AttUnitMain4</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_85">
+         <property name="text">
+          <string>UnitPatrol</string>
+         </property>
+        </widget>
+       </item>
+       <item row="29" column="2">
+        <widget class="QLabel" name="label_91">
+         <property name="text">
+          <string>AttUnitEngageMax</string>
+         </property>
+        </widget>
+       </item>
+       <item row="28" column="1">
+        <widget class="QComboBox" name="AttUnitMain4"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="AttUnit2"/>
+       </item>
+       <item row="20" column="1">
+        <widget class="QComboBox" name="AttUnitMain2"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="label_86">
+         <property name="text">
+          <string>AttUnitPatrolMax</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QSpinBox" name="AttUnitPatrolMax"/>
+       </item>
+       <item row="18" column="0">
+        <widget class="QLabel" name="label_95">
+         <property name="text">
+          <string>AttUnitMain1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="29" column="1">
+        <widget class="QComboBox" name="AttUnitEngage"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_78">
+         <property name="text">
+          <string>AttUnit2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="18" column="1">
+        <widget class="QComboBox" name="AttUnitMain1"/>
+       </item>
+       <item row="28" column="3">
+        <widget class="QSpinBox" name="AttUnitPatrolRecommandDelay">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Supposedly the gameticks, until the Attackunit patrol get ordered a new command for patroling around the enemy's keep.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="AttUnitPatrol"/>
+       </item>
+       <item row="20" column="3">
+        <widget class="QSpinBox" name="AttForceRandom">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The maximum random amount of additional troops in an attack (&lt;span style=&quot; text-decoration: underline;&quot;&gt;this is &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;not&lt;/span&gt;&lt;span style=&quot; text-decoration: underline;&quot;&gt; the amount by which the troops increase per attack!&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="29" column="0">
+        <widget class="QLabel" name="label_90">
+         <property name="text">
+          <string>AttUnitEngage</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QSpinBox" name="AttForceSupportAllyThreshold">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the AI has more than this amount of units in the attack force, it will help their allies or siege an enemy if commanded to do so.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="20" column="2">
+        <widget class="QLabel" name="label_40">
+         <property name="text">
+          <string>AttForceRandom</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QSpinBox" name="AttUnitBackupGroupsCount">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;# of groups the RangedBackupUnits split into. If shields are present in the army, one will be added to each group (if possible).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="AttUnitBackup"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_87">
+         <property name="text">
+          <string>UnitBackup</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QLabel" name="label_69">
+         <property name="text">
+          <string>SupportAllyThreshold</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_88">
+         <property name="text">
+          <string>UnitBackupMax</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="2">
+        <widget class="QLabel" name="label_84">
+         <property name="text">
+          <string>AttPatrolGroupsCount</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="label_89">
+         <property name="text">
+          <string>BackupGroupsCount</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_102">
+         <property name="text">
+          <string>TargetChoice</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="AttUnitBackupMax"/>
+       </item>
+       <item row="25" column="3">
+        <widget class="QSpinBox" name="AttMainGroupsCount">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;# of groups that the AttUnitMain split into. Maximum is 3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>3</number>
+         </property>
+        </widget>
+       </item>
+       <item row="25" column="2">
+        <widget class="QLabel" name="label_101">
+         <property name="text">
+          <string>AttMainGroupsCount</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QComboBox" name="TargetChoice"/>
+       </item>
+       <item row="6" column="3">
+        <widget class="QSpinBox" name="AttForceRallyPercentage">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The %-amount of units of the attack force that the AI will rally before attacking.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="suffix">
+          <string>%</string>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="QLabel" name="label_43">
+         <property name="text">
+          <string>RallyPercentage</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="0">
+        <widget class="QLabel" name="label_119">
+         <property name="text">
+          <string>AttMaxDefault</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="1">
+        <widget class="QSpinBox" name="AttMaxDefault"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="SiegeEngines">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>370</y>
+        <width>131</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Siege Engines</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>131</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>112</width>
+          <height>220</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QComboBox" name="SiegeEngine1"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="SiegeEngine2"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="SiegeEngine3"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="SiegeEngine4"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="SiegeEngine5"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="SiegeEngine6"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="SiegeEngine7"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="SiegeEngine8"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="Defence">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>511</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Defence</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QFrame" name="frame_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>201</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="10" column="0">
+         <widget class="QLabel" name="label_38">
+          <property name="text">
+           <string>OuterPatrolRallyDelay</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_51">
+          <property name="text">
+           <string>SiegeEngineBuildDelay</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="label_36">
+          <property name="text">
+           <string>OuterPatrolGroupsCount</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="DefWallPatrolRallyTime">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount of time for castle patrols, set up in the AIV, to move from one rally point to the next. (Remark: Only spearmen, horse archers and macemen currently do)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QLabel" name="label_37">
+          <property name="text">
+           <string>OuterPatrolGroupsMove</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSpinBox" name="DefSiegeEngineGoldThreshold">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Positive values, will give the AI, if at &amp;gt; 0 gold, the possibility to setup defensive siegeengines for almost free (spending its entire remaining gold, cheating the missing gold if it doesnt have sufficient funds). Negative values will make the AI require to have at least the values amount of gold before spending gold on siegeengines setup in the AIV&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="minimum">
+           <number>-1</number>
+          </property>
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QSpinBox" name="DefSiegeEngineBuildDelay">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The delay before the AI builds/rebuilds in the AIV placed siegeengines, after their spots are free or supporting Towers are build.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_48">
+          <property name="text">
+           <string>WallPatrolGroups</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QSpinBox" name="OuterPatrolGroupsCount">
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_49">
+          <property name="text">
+           <string>SiegeEngineGoldThreshold</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="DefWallPatrolGroups">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount of concurrent existing patrol groups of, in the AIV setup castle patrols per unit type&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <widget class="QSpinBox" name="OuterPatrolRallyDelay">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The delay after which the AI sends out patrols to defend the outer economy. 4 is approximately one month, 24 being half a year.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_47">
+          <property name="text">
+           <string>WallPatrolRallyTime</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="1">
+         <widget class="QCheckBox" name="OuterPatrolGroupsMove">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QFrame" name="frame">
+       <property name="geometry">
+        <rect>
+         <x>204</x>
+         <y>20</y>
+         <width>181</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_15">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_53">
+          <property name="text">
+           <string>SortieUnitMelee</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_52">
+          <property name="text">
+           <string>SortieRangedMin</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_50">
+          <property name="text">
+           <string>SortieUnitRanged</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_57">
+          <property name="text">
+           <string>DiggingUnitMax</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_55">
+          <property name="text">
+           <string>DefDiggingUnit</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_54">
+          <property name="text">
+           <string>SortieMeleeMin</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="SortieUnitRanged"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="SortieUnitMelee"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QComboBox" name="DefDiggingUnit"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="SortieUnitRangedMin">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ranged sortie units are only sent out from castle if at least this amount of them has already been recruited. More than the set amount can be recruited if the AI loses resource building workers frequently.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QSpinBox" name="SortieUnitMeleeMin">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Melee sortie units are only sent out from castle if this amount of them has already been recruited.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QSpinBox" name="DefDiggingUnitMax">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of units that dig own moat.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="maximum">
+           <number>4096</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="DefUnits">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>70</y>
+         <width>121</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>DefUnits</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <widget class="QScrollArea" name="scrollArea_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>121</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>102</width>
+           <height>220</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QComboBox" name="DefUnit1"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="DefUnit2"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="DefUnit3"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="DefUnit4"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="DefUnit5"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="DefUnit6"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="DefUnit7"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="DefUnit8"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QSpinBox" name="DefWalls">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>20</y>
+         <width>43</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Total number of troops for wall defense&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="maximum">
+        <number>4096</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_56">
+       <property name="geometry">
+        <rect>
+         <x>401</x>
+         <y>20</y>
+         <width>43</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DefWalls</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="DefTotal">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>40</y>
+         <width>43</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The total count of all defensive units (&lt;span style=&quot; font-weight:600;&quot;&gt;wall defense + patrols&lt;/span&gt;). If the AI is in its '&lt;span style=&quot; font-weight:600;&quot;&gt;strong&lt;/span&gt;' state, it can overproduce defensive units and put them into the patrols group, if any patrols group is set&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="maximum">
+        <number>4096</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_58">
+       <property name="geometry">
+        <rect>
+         <x>401</x>
+         <y>40</y>
+         <width>43</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DefTotal</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Miscellaneous">
+     <attribute name="title">
+      <string>Miscellaneous</string>
+     </attribute>
+     <widget class="QGroupBox" name="Unknowns">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>181</width>
+        <height>417</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;These parameters are not yet figured out. They all range from 0 to int_max.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="title">
+       <string>Edit Unknown Parameters</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_16">
+       <item row="3" column="1">
+        <widget class="QSpinBox" name="Unknown003"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QSpinBox" name="Unknown004"/>
+       </item>
+       <item row="5" column="1">
+        <widget class="QSpinBox" name="Unknown005"/>
+       </item>
+       <item row="6" column="1">
+        <widget class="QSpinBox" name="Unknown011"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_104">
+         <property name="text">
+          <string>Unknown001</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_106">
+         <property name="text">
+          <string>Unknown004</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_109">
+         <property name="text">
+          <string>Unknown005</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_108">
+         <property name="text">
+          <string>Unknown011</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_111">
+         <property name="text">
+          <string>Unknown000</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_110">
+         <property name="text">
+          <string>Unknown040</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_105">
+         <property name="text">
+          <string>Unknown002</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_107">
+         <property name="text">
+          <string>Unknown003</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="label_113">
+         <property name="text">
+          <string>Unknown073</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_112">
+         <property name="text">
+          <string>Unknown072</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0">
+        <widget class="QLabel" name="label_117">
+         <property name="text">
+          <string>Unknown130</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="Unknown000"/>
+       </item>
+       <item row="15" column="0">
+        <widget class="QLabel" name="label_115">
+         <property name="text">
+          <string>Unknown142</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="label_114">
+         <property name="text">
+          <string>Unknown124</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="QLabel" name="label_116">
+         <property name="text">
+          <string>Unknown129</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="Unknown001"/>
+       </item>
+       <item row="14" column="0">
+        <widget class="QLabel" name="label_118">
+         <property name="text">
+          <string>Unknown132</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSpinBox" name="Unknown002"/>
+       </item>
+       <item row="8" column="1">
+        <widget class="QSpinBox" name="Unknown040"/>
+       </item>
+       <item row="9" column="1">
+        <widget class="QSpinBox" name="Unknown072"/>
+       </item>
+       <item row="10" column="1">
+        <widget class="QSpinBox" name="Unknown073"/>
+       </item>
+       <item row="11" column="1">
+        <widget class="QSpinBox" name="Unknown124"/>
+       </item>
+       <item row="12" column="1">
+        <widget class="QSpinBox" name="Unknown129"/>
+       </item>
+       <item row="13" column="1">
+        <widget class="QSpinBox" name="Unknown130"/>
+       </item>
+       <item row="14" column="1">
+        <widget class="QSpinBox" name="Unknown132"/>
+       </item>
+       <item row="15" column="1">
+        <widget class="QSpinBox" name="Unknown142"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>184</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_17">
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="Name">
+         <property name="placeholderText">
+          <string>Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_121">
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_122">
+         <property name="text">
+          <string>Description</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="Description">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Deprecated</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="CustomName">
+         <property name="placeholderText">
+          <string>Custom Name</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_124">
+         <property name="text">
+          <string>CustomName</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>10</y>
+        <width>301</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>AIC Description</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QStackedWidget" name="Descriptions">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>40</y>
+         <width>301</width>
+         <height>481</height>
+        </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="DescriptionsPage1">
+        <layout class="QGridLayout" name="gridLayout_18">
+         <item row="1" column="0">
+          <widget class="QPlainTextEdit" name="German_2">
+           <property name="placeholderText">
+            <string>Long Description</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" alignment="Qt::AlignVCenter">
+          <widget class="QPlainTextEdit" name="German">
+           <property name="placeholderText">
+            <string>Short Description</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="DescriptionsPage2">
+        <layout class="QGridLayout" name="gridLayout_19">
+         <item row="0" column="0" alignment="Qt::AlignVCenter">
+          <widget class="QPlainTextEdit" name="English">
+           <property name="placeholderText">
+            <string>Short Description</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPlainTextEdit" name="English_2">
+           <property name="placeholderText">
+            <string>Long Description</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="DescriptionsPage3">
+        <layout class="QGridLayout" name="gridLayout_23">
+         <item row="0" column="0" alignment="Qt::AlignVCenter">
+          <widget class="QPlainTextEdit" name="Polish">
+           <property name="placeholderText">
+            <string>Short Description</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPlainTextEdit" name="Polish_2">
+           <property name="placeholderText">
+            <string>Long Description</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="DescriptionsPage4">
+        <layout class="QGridLayout" name="gridLayout_22">
+         <item row="1" column="0">
+          <widget class="QPlainTextEdit" name="Russian_2">
+           <property name="placeholderText">
+            <string>Long Description</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" alignment="Qt::AlignVCenter">
+          <widget class="QPlainTextEdit" name="Russian">
+           <property name="placeholderText">
+            <string>Short Description</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="DescriptionsPage5">
+        <layout class="QGridLayout" name="gridLayout_21">
+         <item row="0" column="0" alignment="Qt::AlignVCenter">
+          <widget class="QPlainTextEdit" name="Chinese">
+           <property name="placeholderText">
+            <string>Short Description</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPlainTextEdit" name="Chinese_2">
+           <property name="placeholderText">
+            <string>Long Description</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="DescriptionsPage6">
+        <layout class="QGridLayout" name="gridLayout_20">
+         <item row="1" column="0">
+          <widget class="QPlainTextEdit" name="Hungarian_2">
+           <property name="placeholderText">
+            <string>Long Description</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" alignment="Qt::AlignVCenter">
+          <widget class="QPlainTextEdit" name="Hungarian">
+           <property name="placeholderText">
+            <string>Short Description</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QListWidget" name="listWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>283</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>19</height>
+        </size>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustIgnored</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="flow">
+        <enum>QListView::LeftToRight</enum>
+       </property>
+       <property name="isWrapping" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="spacing">
+        <number>-2</number>
+       </property>
+       <property name="viewMode">
+        <enum>QListView::IconMode</enum>
+       </property>
+       <property name="modelColumn">
+        <number>0</number>
+       </property>
+       <property name="currentRow">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>German</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>English</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Polish</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Russian</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Chinese</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Hungarian</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>938</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="rsrc.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>Descriptions</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>362</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>357</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
