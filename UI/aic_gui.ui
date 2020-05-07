@@ -133,7 +133,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="Economy">
      <attribute name="title">
@@ -659,7 +659,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reserves that are only consumed if current popularity &amp;lt; LowestPopularity. If the AI has less than this amount it will prioritize buying the missing food.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>10000</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -797,7 +797,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reserves that are only consumed if current popularity &amp;lt; LowestPopularity. If the AI has less than this amount it will prioritize buying the missing food.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>11</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -807,7 +807,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the AI has less than this amount, it will prioritize buying the missing wheat.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>10000</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -867,7 +867,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reserves that are only consumed if current popularity &amp;lt; LowestPopularity. If the AI has less than this amount it will prioritize buying the missing food.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>10000</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -937,7 +937,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount of food, wheat or hops bought at once. Only one of these trades is made per gametick.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>10000</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -947,7 +947,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the AI has less than this amount, it will prioritize buying the missing hops.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>10000</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -1922,7 +1922,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Supposedly the gameticks, until the Attackunit patrol get ordered a new command for patroling around the enemy's keep.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>100</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
