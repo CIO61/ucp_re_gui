@@ -5,7 +5,7 @@ import os
 import regex
 from UI.aic_gui import Ui_MainWindow
 from PyQt5 import QtWidgets
-from aic import aic
+from resource_types import aic
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):

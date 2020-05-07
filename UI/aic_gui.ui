@@ -133,7 +133,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Economy">
      <attribute name="title">
@@ -325,7 +325,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Triggers building of farms for every X amount of current available workers. Set to 0 to disable building&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>512</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -339,7 +339,7 @@
        <item>
         <widget class="QSpinBox" name="MaxFarms">
          <property name="maximum">
-          <number>4096</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -412,7 +412,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Triggers building of woodcutters for every X amount of current available workers. Set to 0 to disable building&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>512</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -429,7 +429,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum number of woodcutters to place&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>512</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -453,7 +453,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Triggers building of quarries for every X amount of current available workers. Set to 0 to disable building&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>512</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -470,7 +470,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum number of quarries to place&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>512</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -494,7 +494,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Triggers building of iron mines for every X amount of current available workers. Set to 0 to disable building&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>512</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -511,7 +511,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum number of iron mines to place&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>512</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -535,7 +535,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Triggers building of pitch rigs for every X amount of current available workers. Set to 0 to disable building.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>512</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -552,7 +552,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum number of pitch rigs to place&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>512</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -649,7 +649,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Above this value of food the AI will give double rations out.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>4096</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -659,7 +659,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reserves that are only consumed if current popularity &amp;lt; LowestPopularity. If the AI has less than this amount it will prioritize buying the missing food.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>4096</number>
+          <number>10000</number>
          </property>
         </widget>
        </item>
@@ -679,7 +679,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum amount of hops, iron, pitch and flour to store in the stockpile.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>4096</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -689,14 +689,14 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum amount of stone to store in the stockpile + the amount of the biggest unbuild Stonebuilding that hasn't been reached in the buildorder of the AIV.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>4096</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
        <item row="13" column="1">
         <widget class="QSpinBox" name="MaxEquipment">
          <property name="maximum">
-          <number>4096</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -713,7 +713,7 @@
        <item row="12" column="1">
         <widget class="QSpinBox" name="MaxFood">
          <property name="maximum">
-          <number>4096</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -723,7 +723,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the AI would have less than this amount of a good after sending them, it won't send them to the requesting player.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>4096</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -750,7 +750,7 @@
        <item row="14" column="1">
         <widget class="QSpinBox" name="MaxWood">
          <property name="maximum">
-          <number>4096</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -787,7 +787,7 @@
        <item row="11" column="1">
         <widget class="QSpinBox" name="MaxBeer">
          <property name="maximum">
-          <number>4096</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -797,7 +797,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reserves that are only consumed if current popularity &amp;lt; LowestPopularity. If the AI has less than this amount it will prioritize buying the missing food.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>4096</number>
+          <number>11</number>
          </property>
         </widget>
        </item>
@@ -807,7 +807,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the AI has less than this amount, it will prioritize buying the missing wheat.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>4096</number>
+          <number>10000</number>
          </property>
         </widget>
        </item>
@@ -867,7 +867,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reserves that are only consumed if current popularity &amp;lt; LowestPopularity. If the AI has less than this amount it will prioritize buying the missing food.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>4096</number>
+          <number>10000</number>
          </property>
         </widget>
        </item>
@@ -897,7 +897,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount of equipment for the armoury bought at once. Only one of these trades is made per gametick.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>4096</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -907,7 +907,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allowed tolerance for all goods before AI sells back to max allowed stock&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>4096</number>
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -937,7 +937,7 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount of food, wheat or hops bought at once. Only one of these trades is made per gametick.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="maximum">
-          <number>4096</number>
+          <number>10000</number>
          </property>
         </widget>
        </item>
@@ -945,6 +945,9 @@
         <widget class="QSpinBox" name="MinimumHop">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the AI has less than this amount, it will prioritize buying the missing hops.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>10000</number>
          </property>
         </widget>
        </item>
@@ -1025,6 +1028,9 @@
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;he delay before the AI rebuilds destroyed resource buildings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
+         <property name="maximum">
+          <number>65535</number>
+         </property>
         </widget>
        </item>
        <item row="0" column="3">
@@ -1042,12 +1048,18 @@
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A (gold) threshold which disables any recruitment and buying of resources for aiv buildings or economy below it. Sortie units, ressource buildings and defensive siegeengines are excluded.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
+         <property name="maximum">
+          <number>65535</number>
+         </property>
         </widget>
        </item>
        <item row="0" column="5">
         <widget class="QSpinBox" name="BuildInterval">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The gameticks between buildsteps. This is only considered &amp;lt;= 5000 gold&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -1117,6 +1129,9 @@
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This may or may not be the number of groups the AttUnitSiegeDef split into&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
+         <property name="maximum">
+          <number>65535</number>
+         </property>
         </widget>
        </item>
        <item row="8" column="0">
@@ -1158,13 +1173,25 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QSpinBox" name="AttUnitSiegeDefMax"/>
+        <widget class="QSpinBox" name="AttUnitSiegeDefMax">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QSpinBox" name="AttDiggingUnitMax"/>
+        <widget class="QSpinBox" name="AttDiggingUnitMax">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QSpinBox" name="AttMaxEngineers"/>
+        <widget class="QSpinBox" name="AttMaxEngineers">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="label_79">
@@ -1177,13 +1204,25 @@
         <widget class="QComboBox" name="AttDiggingUnit"/>
        </item>
        <item row="8" column="1">
-        <widget class="QSpinBox" name="AttMaxTunnelers"/>
+        <widget class="QSpinBox" name="AttMaxTunnelers">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="7" column="1">
-        <widget class="QSpinBox" name="AttMaxLaddermen"/>
+        <widget class="QSpinBox" name="AttMaxLaddermen">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QSpinBox" name="AttMaxAssassins"/>
+        <widget class="QSpinBox" name="AttMaxAssassins">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="9" column="0">
         <widget class="QLabel" name="label_100">
@@ -1199,6 +1238,9 @@
          </property>
          <property name="minimum">
           <number>-1</number>
+         </property>
+         <property name="maximum">
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -1252,7 +1294,7 @@
         <item row="4" column="3">
          <widget class="QSpinBox" name="RecruitInterval">
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -1349,7 +1391,7 @@
         <item row="4" column="1">
          <widget class="QSpinBox" name="RecruitIntervalWeak">
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -1440,7 +1482,7 @@
         <item row="6" column="2">
          <widget class="QSpinBox" name="RecruitIntervalStrong">
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -1667,6 +1709,9 @@
           <property name="toolTip">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Base amount of raid troops&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;Special case: [unknown trigger =&amp;gt; end result multiplied by 1.25]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
+          <property name="maximum">
+           <number>65535</number>
+          </property>
          </widget>
         </item>
         <item row="1" column="0">
@@ -1680,6 +1725,9 @@
          <widget class="QSpinBox" name="RaidUnitsRandom">
           <property name="toolTip">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Maximum random addition to raid troops. &lt;/p&gt;&lt;p&gt;Special cases: &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;[gold &amp;gt; 5000 =&amp;gt; multiplied by 2][gold &amp;lt; 1000 =&amp;gt; set to 0]&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;[enemy gold &amp;lt; 500 =&amp;gt; divided by -2]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="maximum">
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -1737,6 +1785,9 @@
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The base amount of troops with which this AI attacks&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
+         <property name="maximum">
+          <number>65535</number>
+         </property>
         </widget>
        </item>
        <item row="18" column="2">
@@ -1751,6 +1802,9 @@
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;# of groups the AttUnitPatrol split into. &lt;span style=&quot; font-weight:600;&quot;&gt;BUGGY&lt;/span&gt;! More than 1 group results to only a single group attacking, the others standing idle.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
+         <property name="maximum">
+          <number>65535</number>
+         </property>
         </widget>
        </item>
        <item row="28" column="2">
@@ -1761,7 +1815,11 @@
         </widget>
        </item>
        <item row="29" column="3">
-        <widget class="QSpinBox" name="AttUnitEngageMax"/>
+        <widget class="QSpinBox" name="AttUnitEngageMax">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="25" column="0">
         <widget class="QLabel" name="label_98">
@@ -1788,7 +1846,11 @@
         <widget class="QComboBox" name="AttUnitMain3"/>
        </item>
        <item row="0" column="3">
-        <widget class="QSpinBox" name="AttUnit2Max"/>
+        <widget class="QSpinBox" name="AttUnit2Max">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="28" column="0">
         <widget class="QLabel" name="label_97">
@@ -1828,7 +1890,11 @@
         </widget>
        </item>
        <item row="1" column="3">
-        <widget class="QSpinBox" name="AttUnitPatrolMax"/>
+        <widget class="QSpinBox" name="AttUnitPatrolMax">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="18" column="0">
         <widget class="QLabel" name="label_95">
@@ -1855,6 +1921,9 @@
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Supposedly the gameticks, until the Attackunit patrol get ordered a new command for patroling around the enemy's keep.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
         </widget>
        </item>
        <item row="1" column="1">
@@ -1864,6 +1933,9 @@
         <widget class="QSpinBox" name="AttForceRandom">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The maximum random amount of additional troops in an attack (&lt;span style=&quot; text-decoration: underline;&quot;&gt;this is &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;not&lt;/span&gt;&lt;span style=&quot; text-decoration: underline;&quot;&gt; the amount by which the troops increase per attack!&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -1879,6 +1951,9 @@
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the AI has more than this amount of units in the attack force, it will help their allies or siege an enemy if commanded to do so.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
+         <property name="maximum">
+          <number>65535</number>
+         </property>
         </widget>
        </item>
        <item row="20" column="2">
@@ -1892,6 +1967,9 @@
         <widget class="QSpinBox" name="AttUnitBackupGroupsCount">
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;# of groups the RangedBackupUnits split into. If shields are present in the army, one will be added to each group (if possible).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>65535</number>
          </property>
         </widget>
        </item>
@@ -1941,7 +2019,11 @@
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QSpinBox" name="AttUnitBackupMax"/>
+        <widget class="QSpinBox" name="AttUnitBackupMax">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="25" column="3">
         <widget class="QSpinBox" name="AttMainGroupsCount">
@@ -1991,7 +2073,11 @@
         </widget>
        </item>
        <item row="17" column="1">
-        <widget class="QSpinBox" name="AttMaxDefault"/>
+        <widget class="QSpinBox" name="AttMaxDefault">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -2121,7 +2207,7 @@
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount of time for castle patrols, set up in the AIV, to move from one rally point to the next. (Remark: Only spearmen, horse archers and macemen currently do)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -2144,7 +2230,7 @@
            <number>-1</number>
           </property>
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -2154,7 +2240,7 @@
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The delay before the AI builds/rebuilds in the AIV placed siegeengines, after their spots are free or supporting Towers are build.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -2171,7 +2257,7 @@
         <item row="8" column="1">
          <widget class="QSpinBox" name="OuterPatrolGroupsCount">
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -2191,7 +2277,7 @@
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The amount of concurrent existing patrol groups of, in the AIV setup castle patrols per unit type&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -2201,7 +2287,7 @@
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The delay after which the AI sends out patrols to defend the outer economy. 4 is approximately one month, 24 being half a year.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -2321,7 +2407,7 @@
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ranged sortie units are only sent out from castle if at least this amount of them has already been recruited. More than the set amount can be recruited if the AI loses resource building workers frequently.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -2331,7 +2417,7 @@
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Melee sortie units are only sent out from castle if this amount of them has already been recruited.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -2341,7 +2427,7 @@
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of units that dig own moat.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="maximum">
-           <number>4096</number>
+           <number>65535</number>
           </property>
          </widget>
         </item>
@@ -2425,7 +2511,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Total number of troops for wall defense&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="maximum">
-        <number>4096</number>
+        <number>65535</number>
        </property>
       </widget>
       <widget class="QLabel" name="label_56">
@@ -2457,7 +2543,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The total count of all defensive units (&lt;span style=&quot; font-weight:600;&quot;&gt;wall defense + patrols&lt;/span&gt;). If the AI is in its '&lt;span style=&quot; font-weight:600;&quot;&gt;strong&lt;/span&gt;' state, it can overproduce defensive units and put them into the patrols group, if any patrols group is set&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="maximum">
-        <number>4096</number>
+        <number>65535</number>
        </property>
       </widget>
       <widget class="QLabel" name="label_58">
@@ -2505,16 +2591,32 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_16">
        <item row="3" column="1">
-        <widget class="QSpinBox" name="Unknown003"/>
+        <widget class="QSpinBox" name="Unknown003">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QSpinBox" name="Unknown004"/>
+        <widget class="QSpinBox" name="Unknown004">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QSpinBox" name="Unknown005"/>
+        <widget class="QSpinBox" name="Unknown005">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QSpinBox" name="Unknown011"/>
+        <widget class="QSpinBox" name="Unknown011">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_104">
@@ -2594,7 +2696,11 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QSpinBox" name="Unknown000"/>
+        <widget class="QSpinBox" name="Unknown000">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="15" column="0">
         <widget class="QLabel" name="label_115">
@@ -2618,7 +2724,11 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QSpinBox" name="Unknown001"/>
+        <widget class="QSpinBox" name="Unknown001">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="14" column="0">
         <widget class="QLabel" name="label_118">
@@ -2628,31 +2738,67 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QSpinBox" name="Unknown002"/>
+        <widget class="QSpinBox" name="Unknown002">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="8" column="1">
-        <widget class="QSpinBox" name="Unknown040"/>
+        <widget class="QSpinBox" name="Unknown040">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="9" column="1">
-        <widget class="QSpinBox" name="Unknown072"/>
+        <widget class="QSpinBox" name="Unknown072">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="10" column="1">
-        <widget class="QSpinBox" name="Unknown073"/>
+        <widget class="QSpinBox" name="Unknown073">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="11" column="1">
-        <widget class="QSpinBox" name="Unknown124"/>
+        <widget class="QSpinBox" name="Unknown124">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="12" column="1">
-        <widget class="QSpinBox" name="Unknown129"/>
+        <widget class="QSpinBox" name="Unknown129">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="13" column="1">
-        <widget class="QSpinBox" name="Unknown130"/>
+        <widget class="QSpinBox" name="Unknown130">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="14" column="1">
-        <widget class="QSpinBox" name="Unknown132"/>
+        <widget class="QSpinBox" name="Unknown132">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
        <item row="15" column="1">
-        <widget class="QSpinBox" name="Unknown142"/>
+        <widget class="QSpinBox" name="Unknown142">
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
