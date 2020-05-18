@@ -47,25 +47,53 @@
        </widget>
       </item>
       <item row="7" column="1">
-       <widget class="QSpinBox" name="spinBox_10"/>
+       <widget class="QSpinBox" name="ArabArcher">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="8" column="1">
-       <widget class="QSpinBox" name="spinBox_11"/>
+       <widget class="QSpinBox" name="Slave">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="5" column="1">
-       <widget class="QSpinBox" name="spinBox_7"/>
+       <widget class="QSpinBox" name="Swordsman">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QSpinBox" name="spinBox_12"/>
+       <widget class="QSpinBox" name="Maceman">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QSpinBox" name="spinBox_8"/>
+       <widget class="QSpinBox" name="Pikeman">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QSpinBox" name="spinBox_9"/>
+       <widget class="QSpinBox" name="Crossbowman">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="6" column="1">
-       <widget class="QSpinBox" name="spinBox_6"/>
+       <widget class="QSpinBox" name="Knight">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="3" column="0">
        <widget class="QLabel" name="label_7">
@@ -89,7 +117,11 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QSpinBox" name="spinBox_3"/>
+       <widget class="QSpinBox" name="Spearman">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="0" column="0">
        <widget class="QLabel" name="label">
@@ -113,10 +145,18 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QSpinBox" name="spinBox"/>
+       <widget class="QSpinBox" name="EuropArcher">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="9" column="1">
-       <widget class="QSpinBox" name="spinBox_4"/>
+       <widget class="QSpinBox" name="Slinger">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="10" column="0">
        <widget class="QLabel" name="label_4">
@@ -140,7 +180,11 @@
        </widget>
       </item>
       <item row="10" column="1">
-       <widget class="QSpinBox" name="spinBox_5"/>
+       <widget class="QSpinBox" name="Assassin">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="6" column="0">
        <widget class="QLabel" name="label_9">
@@ -164,7 +208,11 @@
        </widget>
       </item>
       <item row="11" column="1">
-       <widget class="QSpinBox" name="spinBox_13"/>
+       <widget class="QSpinBox" name="HorseArcher">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="9" column="0">
        <widget class="QLabel" name="label_3">
@@ -191,18 +239,33 @@
        </widget>
       </item>
       <item row="12" column="1">
-       <widget class="QSpinBox" name="spinBox_14"/>
+       <widget class="QSpinBox" name="ArabSwordsman">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="13" column="1">
-       <widget class="QSpinBox" name="spinBox_15"/>
+       <widget class="QSpinBox" name="FireThrower">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="14" column="1">
-       <widget class="QSpinBox" name="spinBox_16"/>
+       <widget class="QSpinBox" name="Monk">
+        <property name="maximum">
+         <number>4096</number>
+        </property>
+       </widget>
       </item>
       <item row="15" column="1">
-       <widget class="QSpinBox" name="spinBox_17">
+       <widget class="QSpinBox" name="Tunneller">
         <property name="enabled">
          <bool>false</bool>
+        </property>
+        <property name="maximum">
+         <number>4096</number>
         </property>
        </widget>
       </item>
@@ -236,7 +299,7 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="German" native="true">
+     <widget class="QWidget" name="German">
       <attribute name="title">
        <string>German</string>
       </attribute>
@@ -250,7 +313,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="English" native="true">
+     <widget class="QWidget" name="English">
       <attribute name="title">
        <string>English</string>
       </attribute>
@@ -264,7 +327,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="Polish" native="true">
+     <widget class="QWidget" name="Polish">
       <attribute name="title">
        <string>Polish</string>
       </attribute>
@@ -278,7 +341,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="Russian" native="true">
+     <widget class="QWidget" name="Russian">
       <attribute name="title">
        <string>Russian</string>
       </attribute>
@@ -292,7 +355,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="Chinese" native="true">
+     <widget class="QWidget" name="Chinese">
       <attribute name="title">
        <string>Chinese</string>
       </attribute>
@@ -306,7 +369,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="Hungarian" native="true">
+     <widget class="QWidget" name="Hungarian">
       <attribute name="title">
        <string>Hungarian</string>
       </attribute>
@@ -332,7 +395,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Rat">
      <attribute name="title">
@@ -477,9 +540,9 @@
        <string>Name</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="Name"/>
     </widget>
-    <widget class="QGroupBox" name="groupBox_14">
+    <widget class="QGroupBox" name="Lord">
      <property name="title">
       <string>Lord</string>
      </property>
@@ -492,7 +555,7 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox">
+       <widget class="QDoubleSpinBox" name="StrengthMultiplier">
         <property name="decimals">
          <number>1</number>
         </property>
@@ -525,7 +588,7 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QSpinBox" name="spinBox_2">
+       <widget class="QSpinBox" name="DotCount">
         <property name="maximum">
          <number>5</number>
         </property>
@@ -539,10 +602,32 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QComboBox" name="comboBox"/>
+       <widget class="QComboBox" name="Type">
+        <item>
+         <property name="text">
+          <string>Europ</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Arab</string>
+         </property>
+        </item>
+       </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QComboBox" name="comboBox_2"/>
+       <widget class="QComboBox" name="DotColour">
+        <item>
+         <property name="text">
+          <string>Yellow</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Blue</string>
+         </property>
+        </item>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -557,7 +642,25 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <addaction name="menuFile"/>
   </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

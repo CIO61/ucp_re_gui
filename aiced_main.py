@@ -2,7 +2,7 @@ import param_types
 import json
 import sys
 import os
-import regex
+from utils import *
 from UI.aic_gui import Ui_MainWindow
 from PyQt5 import QtWidgets
 from resource_types import aic
@@ -99,19 +99,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 val = str(obj.isChecked())
             lord.Personality[param_name] = val
 
-    @staticmethod
-    def preprocess_json_multilines(file_str):
-        pattern = regex.compile(': ?"([^"]*?\n)[^"]*?"')
-        pos = 0
-        while regex.search(pattern, file_str[pos:]) is not None:
-            item = regex.search(pattern, file_str[pos:])
-            span = item.span()
-            pos_ = span[0] + len(file_str[pos + span[0]:pos + span[1]].replace("\n", "\\n"))
-            file_str = file_str.replace(file_str[pos + span[0]:pos + span[1]],
-                                        file_str[pos + span[0]:pos + span[1]].replace("\n", "\\n"))
-            pos = pos_
-        return file_str
-
     def load_from_file(self, file=None):
         if file is None:
             dialog = QtWidgets.QFileDialog()
@@ -123,8 +110,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             else:
                 return
 
-        file_str = open(file, encoding="utf-8").read()
-        file_str = self.preprocess_json_multilines(file_str)
+        file_str = open(file, encoding="utf-8 sig").read()
+        file_str = preprocess_json_multilines(file_str)
         
         config = json.loads(file_str)
         try:
@@ -184,7 +171,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 continue
             else:
                 output["AICharacters"].append(lord_info)
-        json.dump(output, open(file, encoding="utf-8", newline="\n", mode="w"), indent="\t", ensure_ascii=False,)
+        json.dump(output, open(file, encoding="utf-8", newline="\n", mode="w"), indent="\t", ensure_ascii=False)
 
 
 def load_parameters(config):

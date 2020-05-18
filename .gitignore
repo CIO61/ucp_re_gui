@@ -128,8 +128,8 @@ dmypy.json
 .pyre/
 UI/convert_to_py.py
 UI/mainwindow.ui
-armourer_sketch.ico
-armourer_sketch.bmp
+*.ico
+*.bmp
 *.xlsx
 *.json
 *.qrc
