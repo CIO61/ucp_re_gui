@@ -33,10 +33,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.update_view(idx, upd_mode=True)
 
     def update_view(self, mode_tab, lord_tab=None, upd_lord=False, upd_mode=False):
-        if upd_lord:
-            self.update_lord("lord")
-        elif upd_mode:
-            self.update_lord()
+        if self.latest_modetab != -1:
+            if self.latest_lordtab != -1 and upd_lord:
+                self.update_lord("lord")
+            elif upd_mode:
+                self.update_lord()
         mode = self.mode_tab.tabText(mode_tab)
         lord = lords[self.Lord_Tab.currentIndex()]
         if lord_tab is not None:

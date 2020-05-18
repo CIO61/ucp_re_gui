@@ -20,8 +20,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.actionOpen.triggered.connect(lambda: self.load_from_file())
         self.actionSave.triggered.connect(lambda: self.save_to_file())
         self.set_blank_lord()
-        if os.path.exists("vanilla.json"):
-            self.load_from_file("vanilla.json")
+        if os.path.exists("./resources/aic/vanilla.json"):
+            self.load_from_file("./resources/aic/vanilla.json")
 
     def retranslateUi(self, MainWindow):
         super().retranslateUi(MainWindow)
@@ -34,7 +34,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.update_view(idx, True)
 
     def update_view(self, idx, upd=False):
-        if upd:
+        if upd and self.latest_tab != -1:
             self.update_lord(self.latest_tab)
         lord = lords[idx]
         self.Name.setText(lord.Name)
