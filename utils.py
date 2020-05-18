@@ -1,5 +1,6 @@
 import regex
 
+
 def preprocess_json_multilines(file_str):
     pattern = regex.compile(': ?"([^"]*?\n)[^"]*?"')
     pos = 0

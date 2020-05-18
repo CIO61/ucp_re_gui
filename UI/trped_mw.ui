@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Troop Config Editor - UCPREGUI</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="rsrc.qrc">
+    <normaloff>:/icon/army_sketch.ico</normaloff>:/icon/army_sketch.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox_15">
     <property name="geometry">
@@ -662,6 +666,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="rsrc.qrc"/>
+ </resources>
  <connections/>
 </ui>
