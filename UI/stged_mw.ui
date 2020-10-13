@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Start Goods Editor - UCPREGUI</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="rsrc.qrc">
+    <normaloff>:/icon/stockpile_sketch.ico</normaloff>:/icon/stockpile_sketch.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
@@ -652,6 +656,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="rsrc.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -11,6 +11,8 @@ from resource_types import aic
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
+        self.lords = [aic() for i in range(16)]
+        self.blank_lord = aic()
         self.setupUi(self)
         self.show()
         self.latest_tab = 0
@@ -19,15 +21,15 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.Lord_Tab.currentChanged.connect(self.tab_change)
         self.actionOpen.triggered.connect(lambda: self.load_from_file())
         self.actionSave.triggered.connect(lambda: self.save_to_file())
-        self.set_blank_lord(blank_lord)
+        self.set_blank_lord(self.blank_lord)
         if os.path.exists("./resources/aic/vanilla.json"):
             self.load_from_file("./resources/aic/vanilla.json")
         else:
-            for lord in lords:
+            for lord in self.lords:
                 self.set_blank_lord(lord)
 
-    def retranslateUi(self, MainWindow):
-        super().retranslateUi(MainWindow)
+    def retranslateUi(self, window):
+        super().retranslateUi(window)
         fields_dict = param_types.param_fields
         for section in fields_dict:
             for field in fields_dict[section]:
@@ -39,7 +41,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def update_view(self, idx, upd=False):
         if upd and self.latest_tab != -1:
             self.update_lord(self.latest_tab)
-        lord = lords[idx]
+        lord = self.lords[idx]
         self.Name.setText(lord.Name)
         self.Description.setText(lord.Description)
         self.CustomName.setText(lord.CustomName)
@@ -83,7 +85,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             lord.Personality[param_name] = val
 
     def update_lord(self, idx):
-        lord = lords[idx]
+        lord = self.lords[idx]
         lord.Name = self.Name.text()
         lord.Description = self.Description.text()
         lord.CustomName = self.CustomName.text()
@@ -160,7 +162,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             "Hungarian": self.Hungarian_2.toPlainText()
         }
         output["AICharacters"] = list()
-        for lord in lords:
+        for lord in self.lords:
             lord_info = {
                 "Name": lord.Name,
                 "Description": lord.Description,
@@ -169,16 +171,15 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             }
             if any(lord.Personality[item] is None for item in lord.Personality):
                 continue
-            elif all(lord.Personality[item] == blank_lord.Personality[item] for item in lord.Personality):
+            elif all(lord.Personality[item] == self.blank_lord.Personality[item] for item in lord.Personality):
                 continue
             else:
                 output["AICharacters"].append(lord_info)
         json.dump(output, open(file, encoding="utf-8", newline="\n", mode="w"), indent="\t", ensure_ascii=False)
 
-    @staticmethod
-    def load_parameters(config):
+    def load_parameters(self, config):
         chars = config["AICharacters"]
-        for i, lord in enumerate(lords):
+        for i, lord in enumerate(self.lords):
             try:
                 lord.Name = chars[i]["Name"]
                 lord.Personality = chars[i]["Personality"]
@@ -189,8 +190,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
 
 if __name__ == '__main__':
-    lords = [aic() for i in range(16)]
-    blank_lord = aic()
+
     app = QtWidgets.QApplication([])
     w = MainWindow()
 

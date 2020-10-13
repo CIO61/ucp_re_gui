@@ -11,6 +11,8 @@ from PyQt5 import QtWidgets
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
+        self.lords = [TroopConfig() for _ in range(18)]
+        self.blank_lord = TroopConfig()
         self.setupUi(self)
         self.show()
         self.latest_lordtab = 0
@@ -39,7 +41,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             elif upd_mode:
                 self.update_lord()
         mode = self.mode_tab.tabText(mode_tab)
-        lord = lords[self.Lord_Tab.currentIndex()]
+        lord = self.lords[self.Lord_Tab.currentIndex()]
         if lord_tab is not None:
             self.latest_lordtab = lord_tab
             self.Name.setText(lord.Name)
@@ -62,7 +64,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.latest_modetab = mode_tab
 
     def set_blank_lord(self):
-        lord = blank_lord
+        lord = self.blank_lord
         lord.Name = self.Name.text()
         lord.Lord["StrengthMultiplier"] = self.StrengthMultiplier.value()
         lord.Lord["DotColour"] = self.DotColour.currentText()
@@ -70,7 +72,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         lord.Lord["Type"] = self.Type.currentText()
 
     def update_lord(self, scheme=""):
-        lord = lords[self.latest_lordtab]
+        lord = self.lords[self.latest_lordtab]
         mode = self.mode_tab.tabText(self.latest_modetab)
         if scheme == "lord":
             lord.Name = self.Name.text()
@@ -112,7 +114,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 getattr(self, lang+"_3").setPlainText(info[lang])
         except KeyError:
             pass
-        load_parameters(config)
+        self.load_parameters(config)
         self.update_view(self.mode_tab.currentIndex(), self.Lord_Tab.currentIndex())
 
     def save_to_file(self, file=None):
@@ -136,31 +138,28 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             "Chinese": self.Chinese_3.toPlainText(),
             "Hungarian": self.Hungarian_3.toPlainText()
         }
-        for i, lord in enumerate(lords):
+        for i, lord in enumerate(self.lords):
             idx = str(i+1)
             output[idx] = dict()
-            output[idx]["Name"] = lords[i].Name
-            if lords[i].Lord is not None:
-                output[idx]["Lord"] = lords[i].Lord
-            output[idx]["normal"] = lords[i].normal
-            output[idx]["crusader"] = lords[i].crusader
-            output[idx]["deathmatch"] = lords[i].deathmatch
+            output[idx]["Name"] = self.lords[i].Name
+            if self.lords[i].Lord is not None:
+                output[idx]["Lord"] = self.lords[i].Lord
+            output[idx]["normal"] = self.lords[i].normal
+            output[idx]["crusader"] = self.lords[i].crusader
+            output[idx]["deathmatch"] = self.lords[i].deathmatch
         json.dump(output, open(file, encoding="utf-8", newline="\n", mode="w"), indent="\t", ensure_ascii=False)
 
-
-def load_parameters(config):
-    for i, lord in enumerate(lords):
-        try:
-            char = config[str(i+1)]
-            for param in char:
-                lord.__setattr__(param, char[param])
-        except KeyError:
-            continue
+    def load_parameters(self, config):
+        for i, lord in enumerate(self.lords):
+            try:
+                char = config[str(i+1)]
+                for param in char:
+                    lord.__setattr__(param, char[param])
+            except KeyError:
+                continue
 
 
 if __name__ == '__main__':
-    lords = [TroopConfig() for _ in range(18)]
-    blank_lord = TroopConfig()
     app = QtWidgets.QApplication([])
     w = MainWindow()
 
