@@ -13,15 +13,18 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.show()
-        self.latest_tab = -1
+        self.latest_tab = 0
         self.Lord_Tab.setCurrentIndex(0)
         self.Param_Tab.setCurrentIndex(0)
         self.Lord_Tab.currentChanged.connect(self.tab_change)
         self.actionOpen.triggered.connect(lambda: self.load_from_file())
         self.actionSave.triggered.connect(lambda: self.save_to_file())
-        self.set_blank_lord()
+        self.set_blank_lord(blank_lord)
         if os.path.exists("./resources/aic/vanilla.json"):
             self.load_from_file("./resources/aic/vanilla.json")
+        else:
+            for lord in lords:
+                self.set_blank_lord(lord)
 
     def retranslateUi(self, MainWindow):
         super().retranslateUi(MainWindow)
@@ -61,8 +64,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 obj.setChecked(bool(val))
         self.latest_tab = idx
 
-    def set_blank_lord(self):
-        lord = blank_lord
+    def set_blank_lord(self, lord):
         lord.Name = self.Name.text()
         lord.Description = self.Description.text()
         lord.CustomName = self.CustomName.text()
@@ -126,7 +128,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 getattr(self, lang+"_2").setPlainText(info_long[lang])
         except KeyError:
             pass
-        load_parameters(config)
+        self.load_parameters(config)
         self.update_view(self.Lord_Tab.currentIndex())
 
     def save_to_file(self, file=None):
@@ -173,24 +175,21 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 output["AICharacters"].append(lord_info)
         json.dump(output, open(file, encoding="utf-8", newline="\n", mode="w"), indent="\t", ensure_ascii=False)
 
-
-def load_parameters(config):
-    chars = config["AICharacters"]
-    for i, lord in enumerate(lords):
-        try:
-            lord.Name = chars[i]["Name"]
-            lord.Personality = chars[i]["Personality"]
-            lord.Description = chars[i]["Description"]
-            lord.CustomName = chars[i]["CustomName"]
-        except KeyError:
-            continue
+    @staticmethod
+    def load_parameters(config):
+        chars = config["AICharacters"]
+        for i, lord in enumerate(lords):
+            try:
+                lord.Name = chars[i]["Name"]
+                lord.Personality = chars[i]["Personality"]
+                lord.Description = chars[i]["Description"]
+                lord.CustomName = chars[i]["CustomName"]
+            except KeyError:
+                continue
 
 
 if __name__ == '__main__':
-    lords = [
-        aic(), aic(), aic(), aic(), aic(), aic(), aic(), aic(),
-        aic(), aic(), aic(), aic(), aic(), aic(), aic(), aic()
-    ]
+    lords = [aic() for i in range(16)]
     blank_lord = aic()
     app = QtWidgets.QApplication([])
     w = MainWindow()

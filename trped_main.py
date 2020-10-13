@@ -13,8 +13,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.show()
-        self.latest_lordtab = -1
-        self.latest_modetab = -1
+        self.latest_lordtab = 0
+        self.latest_modetab = 0
         self.Lord_Tab.setCurrentIndex(0)
         self.mode_tab.setCurrentIndex(0)
         self.descr_tab.setCurrentIndex(0)
@@ -43,12 +43,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if lord_tab is not None:
             self.latest_lordtab = lord_tab
             self.Name.setText(lord.Name)
-            L = lord.Lord
+            _l = lord.Lord
             try:
-                self.StrengthMultiplier.setValue(L["StrengthMultiplier"])
-                self.DotCount.setValue(L["DotCount"])
-                self.DotColour.setCurrentText(L["DotColour"])
-                self.Type.setCurrentText(L["Type"])
+                self.StrengthMultiplier.setValue(_l["StrengthMultiplier"])
+                self.DotCount.setValue(_l["DotCount"])
+                self.DotColour.setCurrentText(_l["DotColour"])
+                self.Type.setCurrentText(_l["Type"])
             except TypeError:
                 pass
         m = getattr(lord, mode.lower())
@@ -74,11 +74,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         mode = self.mode_tab.tabText(self.latest_modetab)
         if scheme == "lord":
             lord.Name = self.Name.text()
-            L = lord.Lord
-            L["StrengthMultiplier"] = self.StrengthMultiplier.value()
-            L["DotCount"] = self.DotCount.value()
-            L["DotColour"] = self.DotColour.currentText()
-            L["Type"] = self.Type.currentText()
+            _l = lord.Lord
+            _l["StrengthMultiplier"] = self.StrengthMultiplier.value()
+            _l["DotCount"] = self.DotCount.value()
+            _l["DotColour"] = self.DotColour.currentText()
+            _l["Type"] = self.Type.currentText()
         m = getattr(lord, mode.lower())
         m["Units"] = []
         m["Counts"] = []
@@ -159,9 +159,7 @@ def load_parameters(config):
 
 
 if __name__ == '__main__':
-    lords = []
-    for i in range(18):
-        lords.append(TroopConfig())
+    lords = [TroopConfig() for _ in range(18)]
     blank_lord = TroopConfig()
     app = QtWidgets.QApplication([])
     w = MainWindow()

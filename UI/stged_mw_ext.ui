@@ -6,21 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>840</width>
+    <height>387</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>50</y>
-      <width>231</width>
-      <height>206</height>
+      <x>10</x>
+      <y>10</y>
+      <width>251</width>
+      <height>251</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -179,13 +179,13 @@
      </item>
     </layout>
    </widget>
-   <widget class="QFrame" name="">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>50</y>
-      <width>191</width>
-      <height>102</height>
+      <x>560</x>
+      <y>10</y>
+      <width>231</width>
+      <height>141</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -225,7 +225,7 @@
       </layout>
      </item>
      <item>
-      <widget class="QFrame" name="">
+      <widget class="QFrame" name="frame">
        <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
          <widget class="QSpinBox" name="meat"/>
@@ -280,13 +280,13 @@
      </item>
     </layout>
    </widget>
-   <widget class="QFrame" name="">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>50</y>
-      <width>251</width>
-      <height>206</height>
+      <x>270</x>
+      <y>10</y>
+      <width>281</width>
+      <height>251</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -354,7 +354,7 @@
       </layout>
      </item>
      <item>
-      <widget class="QFrame" name="">
+      <widget class="QFrame" name="frame">
        <layout class="QVBoxLayout" name="verticalLayout_8">
         <item>
          <widget class="QSpinBox" name="bows"/>
@@ -451,7 +451,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>840</width>
      <height>21</height>
     </rect>
    </property>

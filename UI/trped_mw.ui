@@ -10,6 +10,18 @@
     <height>543</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>499</width>
+    <height>543</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>499</width>
+    <height>543</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Troop Config Editor - UCPREGUI</string>
   </property>

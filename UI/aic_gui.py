@@ -1424,7 +1424,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "UCP Resource Editing GUI"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "AIC Editor - UCPREGUI"))
         self.Lord_Tab.setTabText(self.Lord_Tab.indexOf(self.Rat), _translate("MainWindow", "Rat"))
         self.Lord_Tab.setTabText(self.Lord_Tab.indexOf(self.Snake), _translate("MainWindow", "Snake"))
         self.Lord_Tab.setTabText(self.Lord_Tab.indexOf(self.Pig), _translate("MainWindow", "Pig"))
