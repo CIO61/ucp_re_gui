@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>246</width>
+    <width>258</width>
     <height>203</height>
    </rect>
   </property>
@@ -78,7 +78,7 @@
       </property>
       <property name="icon">
        <iconset resource="rsrc.qrc">
-        <normaloff>:/icon/spear.ico</normaloff>:/icon/spear.ico</iconset>
+        <normaloff>:/icon/stockpile_sketch.ico</normaloff>:/icon/stockpile_sketch.ico</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -95,7 +95,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>246</width>
+     <width>258</width>
      <height>21</height>
     </rect>
    </property>

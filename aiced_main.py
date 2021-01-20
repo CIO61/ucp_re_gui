@@ -11,7 +11,7 @@ from resource_types import aic
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        self.lords = [aic() for i in range(16)]
+        self.lords = [aic() for _ in range(16)]
         self.blank_lord = aic()
         self.setupUi(self)
         self.show()
@@ -60,7 +60,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 obj.setCurrentIndex(param_type.index(val))
             elif obj_name == "QSpinBox":
                 if param_name.find("Popularity") != -1:
-                    val /= 100
+                    val //= 100
                 obj.setValue(val)
             elif obj_name == "QCheckBox":
                 obj.setChecked(bool(val))
@@ -114,8 +114,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             else:
                 return
 
-        file_str = open(file, encoding="utf-8 sig").read()
-        file_str = preprocess_json_multilines(file_str)
+        with open(file, encoding="utf-8 sig") as configfile:
+            file_str = preprocess_json(configfile.read())
         
         config = json.loads(file_str)
         try:
@@ -177,14 +177,15 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 output["AICharacters"].append(lord_info)
         json.dump(output, open(file, encoding="utf-8", newline="\n", mode="w"), indent="\t", ensure_ascii=False)
 
+    # noinspection PyPep8Naming
     def load_parameters(self, config):
         chars = config["AICharacters"]
-        for i, lord in enumerate(self.lords):
+        for i, lord in enumerate(chars):
             try:
-                lord.Name = chars[i]["Name"]
-                lord.Personality = chars[i]["Personality"]
-                lord.Description = chars[i]["Description"]
-                lord.CustomName = chars[i]["CustomName"]
+                self.lords[i].Name = chars[i]["Name"]
+                self.lords[i].Personality = chars[i]["Personality"]
+                self.lords[i].Description = chars[i]["Description"]
+                self.lords[i].CustomName = chars[i]["CustomName"]
             except KeyError:
                 continue
 

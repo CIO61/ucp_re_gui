@@ -67,7 +67,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 return
 
         file_str = open(file, encoding="utf-8 sig").read()
-        file_str = preprocess_json_multilines(file_str)
+        file_str = preprocess_json(file_str)
 
         config = json.loads(file_str)
         for attrib in config:
