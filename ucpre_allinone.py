@@ -20,14 +20,12 @@ class UCPAllInOne(QtWidgets.QMainWindow, LauncherMain):
         self.aic_window = None
         self.stg_window = None
 
-        self.trp.clicked.connect(self.launch)
-        self.aic.clicked.connect(self.launch)
-        self.stg.clicked.connect(self.launch)
+        self.trp.clicked.connect(lambda: self.launch("trp"))
+        self.aic.clicked.connect(lambda: self.launch("aic"))
+        self.stg.clicked.connect(lambda: self.launch("stg"))
 
     @pyqtSlot(name="Kek")
-    def launch(self):
-        button: QtWidgets.QPushButton = self.sender()
-        name = button.objectName()
+    def launch(self, name):
         wdw: QtWidgets.QMainWindow = getattr(self, name + "_window")
         if wdw:
             wdw.showNormal()

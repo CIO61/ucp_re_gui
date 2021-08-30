@@ -53,7 +53,7 @@ param_fields = {
         "AttUnitMain2",
         "AttUnitMain3",
         "AttUnitMain4",
-        "AttUnit2"
+        "AttUnitVanguard"
 
     ],
     "DiggingUnit": [
@@ -91,7 +91,7 @@ not_personal = [  # unused
 ]
 
 param_names = [
-  "Unknown000",
+  "WallDecoration",
   "Unknown001",
   "Unknown002",
   "Unknown003",
@@ -131,7 +131,7 @@ param_names = [
   "MinimumHop",
   "TradeAmountFood",
   "TradeAmountEquipment",
-  "Unknown040",
+  "AIRequestDelay",
   "MinimumGoodsRequiredAfterTrade",
   "DoubleRationsFoodThreshold",
   "MaxWood",
@@ -215,13 +215,13 @@ param_names = [
   "HarassingSiegeEngine7",
   "HarassingSiegeEngine8",
   "HarassingSiegeEnginesMax",
-  "Unknown124",
+  "RaidRetargetDelay",
   "AttForceBase",
   "AttForceRandom",
   "AttForceSupportAllyThreshold",
   "AttForceRallyPercentage",
   "Unknown129",
-  "Unknown130",
+  "AttAssaultDelay",
   "AttUnitPatrolRecommandDelay",
   "Unknown132",
   "SiegeEngine1",
@@ -237,8 +237,8 @@ param_names = [
   "AttMaxEngineers",
   "AttDiggingUnit",
   "AttDiggingUnitMax",
-  "AttUnit2",
-  "AttUnit2Max",
+  "AttUnitVanguard",
+  "AttUnitVanguardMax",
   "AttMaxAssassins",
   "AttMaxLaddermen",
   "AttMaxTunnelers",
