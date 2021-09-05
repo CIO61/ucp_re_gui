@@ -58,7 +58,7 @@ class StartGoods:
             "swords": 0,
             "leatherarmor": 0,
             "metalarmor": 0,
-            "gold":{
+            "gold": {
                 "human": [0, 0, 0, 0, 0],
                 "ai": [0, 0, 0, 0, 0]
             }

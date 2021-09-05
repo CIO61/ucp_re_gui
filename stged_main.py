@@ -75,10 +75,18 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.update_view(self.latest_tab)
 
     def save_to_file(self, file=None):
-        pass
-
-    def load_parameters(self, config):
-        pass
+        if file is None:
+            dialog = QtWidgets.QFileDialog()
+            dialog.setDefaultSuffix("json")
+            dialog.setAcceptMode(1)
+            dialog.exec()
+            if len(dialog.selectedFiles()) > 0:
+                file = dialog.selectedFiles()[0]
+            else:
+                return
+        self.update_mode(self.latest_tab)
+        to_write_dict = self.startgoods.__dict__
+        json.dump(to_write_dict, open(file, encoding="utf-8", newline="\n", mode="w"), indent="\t", ensure_ascii=False)
 
 
 if __name__ == '__main__':
